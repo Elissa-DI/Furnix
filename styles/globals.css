@@ -73,7 +73,7 @@
 /* Tailwind Styles */
 
 .app {
-  @apply  z-10 flex justify-center items-center flex-col max-w-7xl sm:px-16 px-2;
+  @apply  z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-2;
 }
 
 .black_btn {
