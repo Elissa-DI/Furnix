@@ -13,7 +13,7 @@ const RootLayout = ({ children }) => {
                 {/* <link rel="shortcut icon" href="/assets/images/logo.svg" /> */}
             </head>
             <body>
-                <main className='app'>
+                <main>
                     <Navbar />
                     {children}
                 </main>

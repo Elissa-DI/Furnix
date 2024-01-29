@@ -13,42 +13,45 @@ const navbar = () => {
     ];
 
     return (
-        <nav className="flex-between w-full mb-10 pt-3">
-            <Link href="/" className="flex gap-1">
-                <Image
-                    src='/assets/icons/logo.svg'
-                    alt='logo'
-                    width={30}
-                    height={30}
-                    className='object-contain'
-                />
-                <p className="hidden md:block font-bold text-sm md:text-2xl">Furnix</p>
-            </Link>
+        <nav className="flex-between w-full py-5 px-16">
+            //Desktop navigation
+            <div>
+                <Link href="/" className="flex gap-1">
+                    <Image
+                        src='/assets/icons/logo.svg'
+                        alt='logo'
+                        width={30}
+                        height={30}
+                        className='object-contain'
+                    />
+                    <p className="hidden md:block font-bold text-sm md:text-2xl">Furnix</p>
+                </Link>
 
-            <div className="w-96 ml-10 hidden md:block">
-                <ul className="flex gap-16">
-                    <Link href="/">Home</Link>
-                    <Link href="/shop">Shop</Link>
-                    <Link href="/about">About</Link>
-                    <Link href="/account">Account</Link>
-                </ul>
-            </div>
+                <div className="w-96 ml-10 hidden md:block">
+                    <ul className="flex gap-16 font-semibold">
+                        <Link href="/">Home</Link>
+                        <Link href="/shop">Shop</Link>
+                        <Link href="/about">About</Link>
+                        <Link href="/account">Account</Link>
+                    </ul>
+                </div>
 
-            <div className="w-[198px] hidden md:block">
-                <ul className="flex gap-x-9">
-                    {navIcons.map((navIcon, index) => (
-                        <Link key={index} href={navIcon.path}>
-                            <navIcon.icon
+                <div className="w-[198px] hidden md:block">
+                    <ul className="flex gap-x-9">
+                        {navIcons.map((navIcon, index) => (
+                            <Link key={index} href={navIcon.path}>
+                                <navIcon.icon
+                                    size={18}
+                                />
+                            </Link>
+                        ))}
+                        <button>
+                            <FaShoppingCart
                                 size={22}
                             />
-                        </Link>
-                    ))}
-                    <button>
-                        <FaShoppingCart
-                            size={22}
-                        />
-                    </button>
-                </ul>
+                        </button>
+                    </ul>
+                </div>
             </div>
         </nav>
     )
