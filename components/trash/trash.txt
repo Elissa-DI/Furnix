@@ -1,0 +1,61 @@
+import product1 from '../../public/assets/images/product1.png';
+import product3 from '../../public/assets/images/product3.png';
+import product4 from '../../public/assets/images/product4.png';
+import product5 from '../../public/assets/images/product5.png';
+import product6 from '../../public/assets/images/product6.png';
+import product7 from '../../public/assets/images/product7.png';
+import product8 from '../../public/assets/images/product8.png';
+
+const Products = () => {
+    const products = [
+        { image: product1, name: "Syltherine", title: "Stylish cafe chair", money: "Rp 2, 500.00", old: "Rp 3,500.00", discount: "-30%" },
+        { image: product7, name: "Leviosa", title: "Stylish chair", money: "Rp 2, 500.00", old: "Rp 3,500.00", discount: "-30%" },
+        { image: product3, name: "Lolito", title: "Luxury big sofa", money: "Rp 2, 500.00", old: "Rp 3,500.00", discount: "-30%" },
+        { image: product4, name: "Respira", title: "Outdoor bar table and stool", money: "Rp 2, 500.00", old: "Rp 3,500.00", discount: "New", isNew: true },
+        { image: product5, name: "Syltherine", title: "Stylish cafe chair", money: "Rp 2, 500.00", old: "Rp 3,500.00", discount: "-30%" },
+        { image: product6, name: "Leviosa", title: "Stylish chair", money: "Rp 2, 500.00", old: "Rp 3,500.00", discount: "New", isNew: true },
+        { image: product7, name: "Lolito", title: "Luxury big sofa", money: "Rp 2, 500.00", old: "Rp 3,500.00", discount: "-30%" },
+        { image: product8, name: "Respira", title: "Outdoor bar table and stool", money: "Rp 2, 500.00", old: "Rp 3,500.00", discount: "New", isNew: true }
+
+    ]
+    return (
+        <div className='md:px-16 sm:px-10 lg:px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3'>
+            {
+                products.map((product, index) => (
+                    <div key={index} className='h-[440px] border rounded'>
+                        <div
+                            className='discount absolute rounded-full w-10 h-10 flex items-center justify-center text-white text-sm ml-60 mt-5'
+                            style={{ backgroundColor: product.isNew ? 'green' : 'red' }}
+                        >{product.discount}</div>
+                        {/* <div style={{ backgroundImage: `url(${product.image})` }} className='bg-cover w-[100%] h-[100%] md:w-full md:bg-cover md:h-[70%]'> */}
+                        <div className='cover bg-cover w-[100%] h-[100%] md:w-full md:bg-cover md:h-[70%]'>
+                            <img
+                                // src={product.image}
+                                src='/assets/images/product1.png'
+                                alt={product.title}
+                                className='w-full h-auto'
+                            />
+                        </div>
+                        <div className='px-3 mt-3'>
+                            <p className='font-bold py-2'>{product.name}</p>
+                            <p className='z-0'>{product.title}</p>
+                            <div className='flex justify-between text-sm py-3'>
+                                <div className='font-bold text-base'>{product.money}</div>
+                                <div className='z-0 line-through'>{product.old}</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                ))
+            }
+            <div className='w-full ml-[500px]'>
+                <button className='border border-[#B88E2F] text-[#B88E2F] px-14 py-3 font-bold'>
+                    Show more
+                </button>
+            </div>
+        </div>
+    )
+}
+
+export default Products
