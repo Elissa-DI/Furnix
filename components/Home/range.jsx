@@ -18,7 +18,7 @@ const Range = () => {
           <p className="font-bold text-xl mb-5 tracking-wide">New Arrival</p>
           <p className="font-extrabold tracking-wide text-4xl text-[#C09A45] mb-5">Discover Our <br />New Collection</p>
           <p className='hidden md:block'>Discover a world of style and comfort with our exquisite furniture collection – where every room becomes a masterpiece.</p>
-          <button className="px-14 py-5 bg-[#B88E2F] font-bold mt-10">
+          <button className="px-14 py-5 bg-[#B88E2F] hover:border hover:border-[#B88E2F] hover:bg-white hover:text-[#b88e2f] font-bold mt-10">
             Buy now
           </button>
         </div>
