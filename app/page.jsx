@@ -1,3 +1,4 @@
+import Footer from "@components/Home/footer"
 import Products from "@components/Home/products"
 import Range from "@components/Home/range"
 import Slider from "@components/Home/slider"
@@ -9,6 +10,7 @@ const Home = () => {
       <Range />
       <Products />
       <Slider />
+      <Footer />
     </section>
   )
 }

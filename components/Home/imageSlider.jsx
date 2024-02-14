@@ -20,7 +20,7 @@ const ImageSlider = ({ images }) => {
 
     return (
         <div className="slider-container relative">
-            <div className='absolute top-[50%] right-[24%] flex items-center justify-between bg-white rounded-full border border-[#B88E2F] p-1'>
+            <div className='absolute top-[50%] right-[24%] flex items-center justify-between bg-white rounded-full shadow-xl p-1'>
                 <button onClick={nextSlide} className="slider-button next">
                     <FaArrowRight size={16} />
                 </button>
